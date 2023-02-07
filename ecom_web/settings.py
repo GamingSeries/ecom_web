@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os 
 
+#tailwind application registration 
+TAILWIND_APP_NAME = 'theme'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = BASE_DIR/'templates'
@@ -28,6 +31,12 @@ SECRET_KEY = 'django-insecure-&@bp#3e5a6sh$70hjjx(bhjy53+s$h6vmma^va5yteew-o7na(
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+
+# IP Address of the machine where the server is running
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 
 # Application definition
