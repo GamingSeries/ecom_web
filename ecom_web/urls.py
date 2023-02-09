@@ -21,4 +21,5 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     
     path('main/', include('exfire.urls')),
+    path('seller/', include ('seller.urls')),
 ]
