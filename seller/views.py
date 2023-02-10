@@ -11,7 +11,8 @@ def acc_view(request):
         form = ItemForm(data)
         if form.is_valid():
             form.save()
-            redirect('exfore : home.html')
+            redirect('exfire : home.html')
+
         else:
             print(form.errors)
     return render (request, 'seller/acc_view.html', {'form' : form})
