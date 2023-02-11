@@ -7,7 +7,7 @@ def acc_view(request):
     form = ItemForm()
     
     if request.method == 'POST':
-        data = request.POST
+        data = ItemForm(request.POST, request.FILES)
         form = ItemForm(data)
         if form.is_valid():
             form.save()
