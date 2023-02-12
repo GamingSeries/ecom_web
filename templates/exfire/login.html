@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
+<form method="post">
+    {% csrf_token %}
+<div id="login_form"> 
+    <center>   
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <br>
+    <button type="submit">Log in</button>
+    </center>
+</div>
+</form>
 {% endblock content %}
