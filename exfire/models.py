@@ -10,10 +10,14 @@ class Customer(models.Model):
     phone_number = models.CharField(max_length=200  , default='')
     email = models.CharField(max_length=200)
     password = models.CharField(max_length=200)
-    
+
     def save(self, *args, **kwargs):
         self.password = make_password(self.password)
         super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = 'Customer_Detail'
+        verbose_name_plural = 'Customer_Details'
