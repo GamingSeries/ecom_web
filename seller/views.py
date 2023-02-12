@@ -5,7 +5,7 @@ from .forms import ItemForm
 
 # Create your views here.
 
-def acc_view(request):
+def add_item(request):
     form = ItemForm()
     
     if request.method == 'POST':
@@ -15,7 +15,7 @@ def acc_view(request):
     else:
         print(form.errors)
     
-    return render(request, 'seller/acc_view.html', {'form': form})
+    return render(request, 'seller/add_item.html', {'form': form})
 
 def seller_info(request):
     if request.method == 'POST':

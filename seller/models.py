@@ -19,8 +19,8 @@ class Merchant(models.Model):
         super().save(*args, **kwargs)
 
     class Meta:
-        verbose_name = 'Seller'
-        verbose_name_plural = 'Sellers'
+        verbose_name = 'Merchant'
+        verbose_name_plural = 'Merchants'
 
     def __str__(self):
         return self.name
