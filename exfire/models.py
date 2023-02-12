@@ -19,5 +19,6 @@ class Customer(models.Model):
         return self.name
     
     class Meta:
-        verbose_name = 'Customer_Detail'
-        verbose_name_plural = 'Customer_Details'
+        verbose_name = 'Customer'
+        verbose_name_plural = 'Customers'
+    
