@@ -3,13 +3,13 @@ from django.contrib.auth.hashers import make_password
 
 # Create your models here.
 
-class Seller(models.Model):
+class Merchant(models.Model):
 
     
     seller_id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
+    password = models.CharField(max_length=100, default=make_password('default_password'))
     email = models.EmailField(max_length=100)
     phone_number = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
@@ -17,7 +17,7 @@ class Seller(models.Model):
     def save(self, *args, **kwargs):
         self.password = make_password(self.password)
         super().save(*args, **kwargs)
-        
+
     class Meta:
         verbose_name = 'Seller'
         verbose_name_plural = 'Sellers'

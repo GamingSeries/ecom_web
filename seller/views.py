@@ -1,4 +1,4 @@
-from seller.models import Seller
+from seller.models import Merchant
 from django.contrib.auth.hashers import make_password
 from django.shortcuts import render, redirect
 from .forms import ItemForm
@@ -22,7 +22,7 @@ def seller_info(request):
         password = request.POST.get('password')
         hashed_password = make_password(password)
 
-        seller = Seller(
+        seller = Merchant(
             name=request.POST.get('name'),
             email=request.POST.get('email'),
             password=hashed_password,

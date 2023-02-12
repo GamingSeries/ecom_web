@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Item, Seller
+from .models import Item, Merchant
 # Register your models here.
 
 admin.site.register(Item)
-admin.site.register(Seller)
+admin.site.register(Merchant)
